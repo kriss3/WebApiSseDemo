@@ -1,3 +1,7 @@
 <Solution>
   <Project Path="WebApiSseDemo.Api/WebApiSseDemo.Api.csproj" />
+  <Project Path="WebApiSseDemo.UI/webapissedemo.ui.esproj">
+    <Build />
+    <Deploy />
+  </Project>
 </Solution>
