@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApiSseDemo.Api.Models;
 
 namespace WebApiSseDemo.Api.Controllers;
 
