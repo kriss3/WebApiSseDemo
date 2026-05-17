@@ -4,6 +4,12 @@ using Scalar.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
+
+builder.Services.AddCors(o => o.AddDefaultPolicy(p =>
+	p.WithOrigins("http://localhost:54614")
+	 .AllowAnyHeader()
+	 .AllowAnyMethod()));
+
 builder.Services.AddSingleton<StreamSyncProgress>(_ => SyncStream.StreamProgressAsync);
 builder.Services.AddControllers();
 
@@ -21,5 +27,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
+
+
+app.UseCors();
 app.MapControllers();
 app.Run();
