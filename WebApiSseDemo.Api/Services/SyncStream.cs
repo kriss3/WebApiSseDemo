@@ -23,7 +23,7 @@ public static class SyncStream
 			};
 		}
 
-		yield return new SseItem<SyncProgress>(new SyncProgress(total, total, "All done"), eventType: "Complete")
+		yield return new SseItem<SyncProgress>(new SyncProgress(total, total, "All done"), eventType: "complete")
 		{
 			EventId = (total + 1).ToString()
 		};
